@@ -1,0 +1,23 @@
+	Some random notes about the project
+	===================================
+
+* Creates the plaintext file:
+
+#> echo "00112233445566778899aabbccddeeff" | xxd -r -p > plaintext.bin
+
+* Check the plaintext.txt
+
+#> xxd plaintext.txt
+00000000: 0011 2233 4455 6677 8899 aabb ccdd eeff  .."3DUfw........
+
+* Cipher the plaintext file:
+
+#> openssl enc -e -aes-128-ecb -K "000102030405060708090a0b0c0d0e0f" \
+                  -in plaintext.bin -out ciphertex.bin
+
+* Check the ciphertext:
+
+#> xxd ciphertex.bin
+00000000: 3925 841d 02dc 09fb dc11 8597 196a 0b32  9%...........j.2
+00000010: a254 be88 e037 ddd9 d79f b641 1c3f 9df8  .T...7.....A.?..
+

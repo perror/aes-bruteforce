@@ -1,0 +1,22 @@
+	aes-bf: AES Brute-force Toolkit
+	===============================
+
+This code is a flexible toolkit to brute force AES keys.
+
+Features
+--------
+- Implements AES-128, AES-192 and AES-256 encoding/decoding with AES-NI.
+
+- Use threads to parallelize the search.
+
+- Provide a list of basic functions to analyze the results
+
+
+Basic usage of the tool is to provide it with one or several pairs of
+plain/cipher text and a way to build the keys and it will search for all
+matching keys by brute-forcing all the keys.
+
+See:
+https://github.com/sebastien-riou/aes-brute-force.git
+https://stackoverflow.com/questions/32297088/how-to-implement-aes128-encryption-decryption-using-aes-ni-instructions-and-gcc
+
